@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+#app > * {
+  border: 1px solid red;
+}
+
+#app {
+  display: grid;
+
+  grid-template:
+  /*areas rows     columns*/ 
+  "A B B" 80px
+  "A B B" 40px
+  "A C D" 50px / 80px 1fr 2fr;
+
+  gap: 30px;
+
+  height: 100vh;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+#app header {
+  grid-area: A;
+  
+}
+
+#app main {
+  grid-area: B;  
+  
+}
+
+#app aside {
+  grid-area: C;
+
+}
+
+#app footer {
+  grid-area: D;
+
+}
